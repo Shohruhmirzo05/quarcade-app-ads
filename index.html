@@ -1,54 +1,85 @@
-<!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Fera Tech</title>
-<style>
-  :root { --bg:#0b0b13; --card:#141422; --fg:#e9e9f1; --muted:#a6a8b8; --accent:#5ae1ff; }
-  *{box-sizing:border-box} body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
-  .wrap{max-width:940px;margin:auto;padding:32px}
-  header h1{margin:0 0 6px;font-size:28px}
-  header p{margin:0;color:var(--muted)}
-  .grid{display:grid;gap:16px;margin:24px 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-  .card{background:var(--card);border-radius:14px;padding:18px;border:1px solid #1f2030}
-  .card h3{margin:0 0 8px} .card p{margin:0 0 10px;color:var(--muted)}
-  .btn{display:inline-block;background:var(--accent);color:#051018;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600}
-  footer{margin-top:24px;color:var(--muted)}
-  a{color:var(--accent)}
-</style>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>Fera Tech</h1>
-      <p>Indie studio building tiny, fast, satisfying games for iPhone.</p>
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fera Tech — small studio, big polish.</title>
+    <meta name="description" content="We craft playful, privacy-aware apps with buttery-smooth performance.">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="icon" href="assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta property="og:title" content="Fera Tech">
+    <meta property="og:description" content="We craft playful, privacy-aware apps with buttery-smooth performance.">
+    <meta property="og:image" content="assets/images/og-fera.png">
+    <meta property="og:url" content="https://fera-tech.com">
+    <script type="module" src="ts/main.ts" defer></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="sticky top-0 z-50 bg-opacity-80 backdrop-blur-lg p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">Fera Tech</a>
+            <nav role="navigation" class="space-x-4">
+                <a href="apps/index.html" class="hover:text-fx-blue">Apps</a>
+                <a href="privacy/index.html" class="hover:text-fx-blue">Privacy</a>
+                <a href="support/index.html" class="hover:text-fx-blue">Support</a>
+                <button id="theme-toggle" class="focus:outline-none focus:ring-2 focus:ring-fx-blue">Toggle Theme</button>
+            </nav>
+        </div>
     </header>
 
-    <section class="grid">
-      <div class="card">
-        <h3>QuarCade</h3>
-        <p>Mini-arcade with seven bite-size games, daily challenge, and global tier ladder.</p>
-        <a class="btn" href="https://apps.apple.com/app/id6752634023">View on App Store</a>
-      </div>
+    <main>
+        <section class="hero bg-cover bg-center h-screen" style="background-image: url('assets/images/hero.webp');">
+            <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+                <div class="text-center">
+                    <h1 class="text-5xl font-extrabold animate-gradient-text">Fera Tech</h1>
+                    <p class="mt-4 text-lg">Tiny studio. Playful apps. Zero friction.</p>
+                    <div class="mt-6">
+                        <a href="apps/index.html" class="bg-gradient-to-r from-fx-pink to-fx-blue text-white py-2 px-4 rounded-lg hover:shadow-lg">Explore Apps</a>
+                        <a href="support/index.html" class="ml-4 text-fx-blue underline">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="card">
-        <h3>Support</h3>
-        <p>FAQ and contact for QuarCade.</p>
-        <a class="btn" href="/support/">Open Support</a>
-      </div>
+        <section class="py-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold">Featured Apps</h2>
+                <div id="app-preview" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                    <!-- App cards will be rendered here -->
+                </div>
+                <a href="apps/index.html" class="mt-6 text-fx-blue underline">View all apps →</a>
+            </div>
+        </section>
 
-      <div class="card">
-        <h3>Privacy Policy</h3>
-        <p>How we handle data and ads (AdMob).</p>
-        <a class="btn" href="/privacy/">Read Privacy</a>
-      </div>
+        <section class="py-16 bg-gray-800">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold">Why Fera?</h2>
+                <div class="flex justify-center space-x-4 mt-8">
+                    <div class="bg-gray-700 p-4 rounded-lg">Performance-first</div>
+                    <div class="bg-gray-700 p-4 rounded-lg">Privacy-aware by design</div>
+                    <div class="bg-gray-700 p-4 rounded-lg">Tasteful motion. No gimmicks.</div>
+                </div>
+            </div>
+        </section>
 
-      <div class="card">
-        <h3>Developer Files</h3>
-        <p><a href="/app-ads.txt">app-ads.txt</a> (for ad verification)</p>
-      </div>
-    </section>
+        <section class="py-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold">Subscribe to our Newsletter</h2>
+                <form action="mailto:support@fera-tech.com?subject=Subscribe" method="get" class="mt-6">
+                    <input type="email" placeholder="Your email" required class="p-2 rounded-lg">
+                    <button type="submit" class="bg-gradient-to-r from-fx-pink to-fx-blue text-white py-2 px-4 rounded-lg">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <footer>© 2025 Fera Tech — <a href="/support/">support@fera-tech.com</a></footer>
-  </div>
+    <footer class="py-4 text-center">
+        <p>© Fera Tech</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#" class="text-fx-blue">Twitter</a>
+            <a href="#" class="text-fx-blue">GitHub</a>
+            <a href="#" class="text-fx-blue">LinkedIn</a>
+        </div>
+    </footer>
 </body>
 </html>

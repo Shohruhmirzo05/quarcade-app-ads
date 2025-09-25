@@ -1,64 +1,103 @@
-Privacy policy & Contact: 
+# Fera Tech
 
-QuarCade Privacy Policy
-Last updated: September 17, 2025
+Welcome to the Fera Tech project! This repository contains the source code for the Fera Tech website, a modern, high-performance, and accessible static site hosted on GitHub Pages.
 
-Overview
-QuarCade is a casual arcade app. We do not require an account, and your gameplay data (scores, progress, settings) is stored on your device. We show ads using Google AdMob, which may collect certain device and usage data to serve and measure ads. This policy explains what we collect, how it’s used, and your choices.
+## Project Structure
 
-Data We Collect
+The project is organized as follows:
 
-On-device gameplay data
-• Scores, progress, and in-app settings are stored locally on your device.
-• We do not maintain our own cloud database of your gameplay.
+```
+fera-tech
+├── CNAME                      # Custom domain for GitHub Pages
+├── README.md                  # Project documentation
+├── index.html                 # Main landing page
+├── 404.html                   # Fallback page for unmatched routes
+├── sitemap.xml                # Structured list of site pages for search engines
+├── robots.txt                 # Instructions for search engines on crawling
+├── app-ads.txt                # Ad verification file
+├── manifest.webmanifest       # Metadata for the web app
+├── package.json               # Project dependencies and scripts
+├── tsconfig.json              # TypeScript configuration
+├── vite.config.ts             # Vite configuration for building the project
+├── tailwind.config.js         # Tailwind CSS configuration
+├── postcss.config.js          # PostCSS configuration
+├── css
+│   └── tailwind.css           # Tailwind CSS styles
+├── ts
+│   ├── main.ts                # Main TypeScript code
+│   ├── apps.ts                # Fetches and renders app data
+│   └── observables.ts         # Helper functions for IntersectionObserver
+├── data
+│   └── apps.json             # JSON data for apps
+├── assets
+│   ├── logos
+│   │   ├── fera.svg           # Fera Tech logo
+│   │   └── quarcade.svg       # QuarCade logo
+│   ├── images
+│   │   ├── hero.webp          # Hero image for landing page
+│   │   ├── quarcade-1.webp    # Screenshot for QuarCade
+│   │   ├── quarcade-2.webp    # Screenshot for QuarCade
+│   │   └── quarcade-3.webp    # Screenshot for QuarCade
+│   └── favicons               # Favicon assets
+├── apps
+│   ├── index.html             # Apps directory page
+│   └── quarcade.html          # QuarCade details page
+├── privacy
+│   └── index.html             # Privacy policy page
+└── support
+    └── index.html             # Contact/support page
+```
 
+## Setup Instructions
 
-Advertising and measurement data (Google AdMob)
-• Identifiers: device identifiers such as IDFA/IDFV (subject to your iOS tracking choices).
-• Approximate location: may be inferred from your IP address to help select relevant ads and for fraud prevention.
-• Usage/interaction: ad impressions, taps, and related performance metrics.
-• Diagnostics & fraud prevention: data used to keep ads reliable and prevent abuse.
+To get started with the project, follow these steps:
 
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/fera-tech.git
+   cd fera-tech
+   ```
 
-AdMob collects and processes this information in accordance with Google’s policies:
-• Google AdMob: https://policies.google.com/technologies/ads
-• Google Privacy Policy: https://policies.google.com/privacy
+2. Install the dependencies:
+   ```
+   npm i
+   ```
 
-How We Use Data
-• Provide and operate app features (saving scores and settings).
-• Serve and measure advertising through Google AdMob (frequency capping, impression counting, performance).
-• Improve stability and performance.
-We do not sell your personal data.
+3. Build the project:
+   ```
+   npm run build
+   ```
 
-Data Sharing
-• We share data with service providers necessary to operate the app, specifically Google AdMob for advertising and measurement.
-• We do not share your contact information because we do not collect it.
-• AdMob may process data as an independent controller in line with its own privacy policy.
+4. Preview the project locally:
+   ```
+   npm run preview
+   ```
 
-Tracking, Personalization, and Your Choices
-• App Tracking Transparency (ATT): On iOS, you can choose whether to allow ad tracking. If you select “Don’t Allow,” we will not permit access to the IDFA for personalized ads. You can change this anytime in iOS Settings > Privacy & Security > Tracking.
-• Reset or limit ad identifiers: Adjust settings in Settings > Privacy & Security > Tracking.
-• Regional consent (e.g., GDPR): Depending on your region, you may see consent dialogs that let you choose personalized or non-personalized ads.
-• Apple Advertising controls: You can limit Apple’s ad personalization in Settings > Privacy & Security > Apple Advertising.
+## Usage
 
-Data Storage and Retention
-• Gameplay data remains on your device until you delete it or uninstall the app.
-• Ad data collected by Google is retained by Google according to its policies.
-• We do not operate our own analytics or user accounts.
+- The main landing page is located at `index.html`, featuring a hero section, app previews, and a newsletter subscription form.
+- The apps directory can be accessed at `apps/index.html`, where you can find a filterable grid of apps.
+- Each app has a dedicated details page, such as `apps/quarcade.html`, which includes features and download links.
+- The privacy policy can be found at `privacy/index.html`, and support information is available at `support/index.html`.
 
-Children’s Privacy
-QuarCade is a general-audience app and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, contact us and we will address the issue promptly.
+## Deployment
 
-International Data Transfers
-Google AdMob may process data on servers outside your country of residence. For details on international transfers and applicable safeguards, see Google’s privacy documentation.
+For GitHub Pages, commit the following files:
 
-Security
-We use iOS platform protections and reasonable technical measures to safeguard data handled by the app. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security.
+- `dist/` (the output directory)
+- `CNAME`
+- `index.html`
+- `404.html`
+- `sitemap.xml`
+- `robots.txt`
+- `app-ads.txt`
+- `manifest.webmanifest`
+- `css/tailwind.css`
+- `assets/` (all assets)
+- `apps/` (all app pages)
+- `privacy/` (privacy policy page)
+- `support/` (support page)
 
-Changes to This Policy
-We may update this policy to reflect changes to the app or legal requirements. We will update the “Last updated” date above when changes occur.
+## License
 
-Contact Us
-For questions or requests about privacy:
-Email: support@fera-tech.com
-Subject: Privacy Policy Inquiry
+This project is licensed under the MIT License. See the LICENSE file for details.
