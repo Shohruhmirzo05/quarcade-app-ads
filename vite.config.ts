@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
-import { resolve, join } from 'path';
-import { copyFileSync, mkdirSync, existsSync } from 'fs';
+import { resolve, join } from 'node:path';
+import { copyFileSync, mkdirSync, existsSync } from 'node:fs';
 
 const rootStaticFiles = ['CNAME', 'app-ads.txt', 'robots.txt', 'sitemap.xml'];
 
@@ -9,17 +9,16 @@ const copyRootStatics = () => ({
   closeBundle() {
     const outDir = resolve(__dirname, 'dist');
     mkdirSync(outDir, { recursive: true });
-
     for (const file of rootStaticFiles) {
-      const source = resolve(__dirname, file);
-      if (!existsSync(source)) continue;
-      const destination = join(outDir, file);
-      copyFileSync(source, destination);
+      const from = resolve(__dirname, file);
+      if (!existsSync(from)) continue;
+      copyFileSync(from, join(outDir, file));
     }
-  }
+  },
 });
 
 export default defineConfig({
+  base: '/',              // important for fera-tech.com
   root: './',
   build: {
     outDir: 'dist',
@@ -30,12 +29,10 @@ export default defineConfig({
         quarcade: resolve(__dirname, 'apps/quarcade.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         support: resolve(__dirname, 'support/index.html'),
-        notFound: resolve(__dirname, '404.html')
-      }
-    }
+        notFound: resolve(__dirname, '404.html'),
+      },
+    },
   },
-  server: {
-    open: true
-  },
-  plugins: [copyRootStatics()]
+  server: { open: true },
+  plugins: [copyRootStatics()],
 });
