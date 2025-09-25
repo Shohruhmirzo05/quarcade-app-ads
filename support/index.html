@@ -1,43 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Fera Tech</title>
-    <meta name="description" content="Contact support for Fera Tech applications.">
-    <link rel="stylesheet" href="/css/tailwind.css">
-    <link rel="icon" href="/assets/favicons/favicon.ico" type="image/x-icon">
-</head>
-<body class="bg-gray-900 text-white">
-    <header class="sticky top-0 bg-gray-800 shadow-lg">
-        <div class="container mx-auto p-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold">Fera Tech</a>
-            <nav role="navigation">
-                <ul class="flex space-x-4">
-                    <li><a href="/apps/" class="hover:text-fx-blue">Apps</a></li>
-                    <li><a href="/privacy/" class="hover:text-fx-blue">Privacy</a></li>
-                    <li><a href="/support/" class="hover:text-fx-blue">Support</a></li>
-                </ul>
-            </nav>
-        </div>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support — Fera Tech</title>
+    <meta name="description" content="Get help with Fera Tech apps, contact our support team, or browse quick answers." />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta property="og:title" content="Fera Tech Support" />
+    <meta property="og:description" content="Reach the Fera Tech team for assistance and FAQs." />
+    <meta property="og:image" content="https://fera-tech.com/assets/images/hero.webp" />
+    <meta property="og:url" content="https://fera-tech.com/support/" />
+    <link rel="canonical" href="https://fera-tech.com/support/" />
+    <script type="module" src="/ts/main.ts" defer></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-black via-transparent to-black/80 text-white">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a class="flex items-center gap-2 text-lg font-semibold" href="/">
+          <img src="/assets/logos/quarcade.svg" alt="Fera Tech monogram" class="h-8 w-8" />
+          <span>Fera Tech</span>
+        </a>
+        <nav aria-label="Primary navigation" class="flex items-center gap-6 text-sm font-medium">
+          <a href="/apps/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Apps</a>
+          <a href="/privacy/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Privacy</a>
+          <a href="/support/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Support</a>
+        </nav>
+        <button
+          type="button"
+          data-theme-toggle
+          class="rounded-full border border-white/10 px-4 py-2 text-sm font-medium hover:border-fx-blue hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue"
+        >Dark mode</button>
+      </div>
     </header>
-    <main class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-4">Support</h1>
-        <p>If you need assistance with our applications, please reach out to us:</p>
-        <ul class="list-disc list-inside mb-4">
-            <li>Email: <a href="mailto:support@fera-tech.com" class="text-fx-blue">support@fera-tech.com</a></li>
-            <li>Follow us on social media for updates and support.</li>
-        </ul>
-        <h2 class="text-2xl font-semibold mt-6">Frequently Asked Questions</h2>
-        <div class="mt-4">
-            <h3 class="font-bold">How do I report a bug?</h3>
-            <p>Please send us an email with details about the issue you encountered.</p>
-            <h3 class="font-bold">Where can I find the user guide?</h3>
-            <p>User guides are available on the app's page under the "Learn more" section.</p>
+
+    <main class="mx-auto w-full max-w-5xl px-6 py-16">
+      <header class="text-center md:text-left">
+        <p class="text-xs uppercase tracking-[0.3em] text-white/60">We respond within 24 hours (Asia/Tashkent)</p>
+        <h1 class="mt-4 text-4xl font-semibold md:text-5xl">Support</h1>
+        <p class="mt-6 max-w-3xl text-white/70">
+          Need help with QuarCade or another Fera Tech experience? Reach out below or browse our quick answers while you wait.
+        </p>
+      </header>
+
+      <section class="mt-12 grid gap-8 md:grid-cols-2">
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg">
+          <h2 class="text-2xl font-semibold">Contact us</h2>
+          <p class="mt-3 text-white/70">Choose the channel that fits your question best.</p>
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <p class="font-medium text-white">General support</p>
+              <a href="mailto:support@fera-tech.com" class="text-fx-blue hover:underline">support@fera-tech.com</a>
+              <p class="text-white/60">Average reply time: 6 business hours.</p>
+            </li>
+            <li>
+              <p class="font-medium text-white">Press & partnerships</p>
+              <a href="mailto:press@fera-tech.com" class="text-fx-blue hover:underline">press@fera-tech.com</a>
+            </li>
+            <li>
+              <p class="font-medium text-white">Bug reports</p>
+              <a href="mailto:bugs@fera-tech.com" class="text-fx-blue hover:underline">bugs@fera-tech.com</a>
+              <p class="text-white/60">Attach screenshots, device info, and reproduction steps.</p>
+            </li>
+          </ul>
+        </article>
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg">
+          <h2 class="text-2xl font-semibold">Support hours</h2>
+          <p class="mt-3 text-white/70">We work asynchronously across Asia/Tashkent time.</p>
+          <dl class="mt-6 grid gap-3 text-sm text-white/70">
+            <div class="flex justify-between">
+              <dt>Monday — Friday</dt>
+              <dd>10:00 – 18:00 (UTC+5)</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt>Saturday</dt>
+              <dd>On call for priority issues</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt>Sunday</dt>
+              <dd>Closed</dd>
+            </div>
+          </dl>
+          <p class="mt-6 text-white/60">Emergency downtime updates post to <a href="https://twitter.com" class="text-fx-blue hover:underline" target="_blank" rel="noopener">@FeraTech</a>.</p>
+        </article>
+      </section>
+
+      <section class="mt-16 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg" aria-labelledby="faq">
+        <h2 id="faq" class="text-2xl font-semibold">Frequently asked</h2>
+        <div class="mt-6 space-y-6">
+          <article>
+            <h3 class="text-lg font-semibold">How do I restore purchases?</h3>
+            <p class="mt-2 text-sm text-white/70">Open QuarCade → Settings → Purchases → Restore. Still stuck? Email us with your App Store receipt.</p>
+          </article>
+          <article>
+            <h3 class="text-lg font-semibold">Can I request a feature?</h3>
+            <p class="mt-2 text-sm text-white/70">Yes! Send details to <a href="mailto:support@fera-tech.com" class="text-fx-blue hover:underline">support@fera-tech.com</a> with subject “Feature request”.</p>
+          </article>
+          <article>
+            <h3 class="text-lg font-semibold">Where is the privacy policy?</h3>
+            <p class="mt-2 text-sm text-white/70">You can read it any time at <a href="/privacy/" class="text-fx-blue hover:underline">fera-tech.com/privacy</a>.</p>
+          </article>
         </div>
+      </section>
     </main>
-    <footer class="bg-gray-800 p-4 text-center">
-        <p>© Fera Tech 2023. All rights reserved.</p>
+
+    <footer class="border-t border-white/10 bg-black/70">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm text-white/60">© <span data-year></span> Fera Tech. We’re here to help.</p>
+        <div class="flex gap-4 text-sm">
+          <a href="/apps/" class="text-fx-blue hover:underline">Browse apps</a>
+          <a href="/privacy/" class="text-fx-blue hover:underline">Privacy policy</a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

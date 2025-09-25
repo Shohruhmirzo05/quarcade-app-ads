@@ -6,13 +6,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "rootDir": "./ts",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {
-      "*": ["node_modules/*", "*"]
-    }
+    "types": ["vite/client"]
   },
-  "include": ["ts/**/*.ts"],
+  "include": ["ts/**/*.ts", "data/**/*.json"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,59 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Fera Tech</title>
-    <meta name="description" content="Read our privacy policy to understand how we handle your data at Fera Tech.">
-    <link rel="stylesheet" href="/css/tailwind.css">
-    <link rel="icon" href="/assets/favicons/favicon.ico" type="image/x-icon">
-</head>
-<body class="bg-gray-900 text-white">
-    <header class="sticky top-0 bg-gray-800 shadow-lg">
-        <div class="container mx-auto p-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold">Fera Tech</a>
-            <nav role="navigation">
-                <ul class="flex space-x-4">
-                    <li><a href="/apps/" class="hover:text-fx-blue">Apps</a></li>
-                    <li><a href="/privacy/" class="hover:text-fx-blue">Privacy</a></li>
-                    <li><a href="/support/" class="hover:text-fx-blue">Support</a></li>
-                </ul>
-            </nav>
-        </div>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Fera Tech</title>
+    <meta name="description" content="Learn how Fera Tech collects, uses, and protects your information across our apps and website." />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta property="og:title" content="Fera Tech Privacy Policy" />
+    <meta property="og:description" content="Transparency on the data practices behind Fera Tech apps." />
+    <meta property="og:image" content="https://fera-tech.com/assets/images/hero.webp" />
+    <meta property="og:url" content="https://fera-tech.com/privacy/" />
+    <link rel="canonical" href="https://fera-tech.com/privacy/" />
+    <script type="module" src="/ts/main.ts" defer></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-black via-transparent to-black/80 text-white">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a class="flex items-center gap-2 text-lg font-semibold" href="/">
+          <img src="/assets/logos/quarcade.svg" alt="Fera Tech monogram" class="h-8 w-8" />
+          <span>Fera Tech</span>
+        </a>
+        <nav aria-label="Primary navigation" class="flex items-center gap-6 text-sm font-medium">
+          <a href="/apps/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Apps</a>
+          <a href="/privacy/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Privacy</a>
+          <a href="/support/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Support</a>
+        </nav>
+        <button
+          type="button"
+          data-theme-toggle
+          class="rounded-full border border-white/10 px-4 py-2 text-sm font-medium hover:border-fx-blue hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue"
+        >Dark mode</button>
+      </div>
     </header>
 
-    <main class="container mx-auto p-6">
-        <h1 class="text-4xl font-bold mb-4">Privacy Policy</h1>
-        <p class="mb-4">At Fera Tech, we value your privacy and are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your data.</p>
+    <main class="mx-auto w-full max-w-4xl px-6 py-16">
+      <header class="text-center md:text-left">
+        <p class="text-xs uppercase tracking-[0.3em] text-white/60">Updated: <time datetime="2025-09-25">25 September 2025</time></p>
+        <h1 class="mt-4 text-4xl font-semibold md:text-5xl">Privacy Policy</h1>
+        <p class="mt-6 max-w-2xl text-white/70">
+          We design for respect and trust. This policy outlines the data we collect, why we collect it, and how you can control your information.
+        </p>
+      </header>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-2">Information We Collect</h2>
-        <ul class="list-disc list-inside mb-4">
-            <li>Personal information you provide when contacting us.</li>
-            <li>Usage data collected through our applications.</li>
+      <article class="prose prose-invert mt-12 max-w-none">
+        <h2 id="information-we-collect">Information we collect</h2>
+        <p>We only collect the minimum data necessary to provide and improve our apps.</p>
+        <ul>
+          <li><strong>Accountless usage data.</strong> Anonymous crash logs and performance metrics help us keep experiences stable.</li>
+          <li><strong>Support conversations.</strong> Emails or form submissions you send us are stored securely so we can respond.</li>
+          <li><strong>Opt-in diagnostics.</strong> When you explicitly opt in, we record gameplay analytics to tune difficulty curves.</li>
         </ul>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-2">How We Use Your Information</h2>
-        <p class="mb-4">We use your information to:</p>
-        <ul class="list-disc list-inside mb-4">
-            <li>Improve our applications and services.</li>
-            <li>Respond to your inquiries and support requests.</li>
+        <h2 id="how-we-use-data">How we use data</h2>
+        <p>Your data powers customer support and app improvements — nothing else.</p>
+        <ul>
+          <li>To triage bugs, crashes, or usability issues you report.</li>
+          <li>To measure performance across devices and OS versions.</li>
+          <li>To send release updates if you subscribed to our newsletter.</li>
         </ul>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-2">Data Security</h2>
-        <p class="mb-4">We implement appropriate technical and organizational measures to protect your personal data from unauthorized access, use, or disclosure.</p>
+        <h2 id="sharing">When we share data</h2>
+        <p>We do not sell or rent your data. Limited sharing occurs only when:</p>
+        <ul>
+          <li>Working with infrastructure providers (Apple, GitHub) who process data on our behalf under strict agreements.</li>
+          <li>Complying with legal requests when required by applicable law.</li>
+        </ul>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-2">Your Rights</h2>
-        <p class="mb-4">You have the right to request access to the personal data we hold about you, and to request corrections or deletions of your data.</p>
+        <h2 id="security">Security & retention</h2>
+        <p>We use encryption in transit and at rest, restrict access to authorized personnel, and review retention quarterly. Support threads older than 18 months are purged unless they remain active.</p>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-2">Changes to This Policy</h2>
-        <p class="mb-4">We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
+        <h2 id="your-rights">Your rights</h2>
+        <p>You can request to access, correct, export, or delete your data at any time. Email us at <a href="mailto:privacy@fera-tech.com">privacy@fera-tech.com</a> with your request.</p>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-2">Contact Us</h2>
-        <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:support@fera-tech.com" class="text-fx-blue">support@fera-tech.com</a>.</p>
+        <h2 id="changes">Policy updates</h2>
+        <p>If we make material changes, we’ll post a changelog here and notify newsletter subscribers.</p>
+
+        <h2 id="contact">Contact</h2>
+        <p>For privacy questions, reach out to <a href="mailto:support@fera-tech.com">support@fera-tech.com</a>.</p>
+      </article>
     </main>
 
-    <footer class="bg-gray-800 p-4 text-center">
-        <p>© 2023 Fera Tech. All rights reserved.</p>
+    <footer class="border-t border-white/10 bg-black/70">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm text-white/60">© <span data-year></span> Fera Tech. Transparency isn’t optional.</p>
+        <div class="flex gap-4 text-sm">
+          <a href="/support/" class="text-fx-blue hover:underline">Need help?</a>
+          <a href="/apps/" class="text-fx-blue hover:underline">Explore apps</a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

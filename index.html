@@ -1,84 +1,194 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fera Tech — small studio, big polish.</title>
-  <meta name="description" content="We craft playful, privacy-aware apps with buttery-smooth performance.">
-  <link rel="icon" href="assets/favicons/favicon.ico" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <meta property="og:title" content="Fera Tech" />
-  <meta property="og:description" content="We craft playful, privacy-aware apps with buttery-smooth performance." />
-  <meta property="og:image" content="assets/images/og-fera.png" />
-  <meta property="og:url" content="https://fera-tech.com" />
-  <script type="module" src="/ts/main.ts" defer></script>
-</head>
-<body class="bg-gray-900 text-white">
-  <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold">Fera Tech</a>
-      <nav class="space-x-4" aria-label="Primary">
-        <a href="apps/index.html" class="hover:text-fx-blue">Apps</a>
-        <a href="privacy/index.html" class="hover:text-fx-blue">Privacy</a>
-        <a href="support/index.html" class="hover:text-fx-blue">Support</a>
-        <button id="theme-toggle" class="focus:outline-none focus:ring-2 focus:ring-fx-blue rounded px-2 py-1">
-          Toggle Theme
-        </button>
-      </nav>
-    </div>
-  </header>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fera Tech — Playful apps engineered for flow</title>
+    <meta
+      name="description"
+      content="Fera Tech builds small-but-mighty mobile experiences with buttery performance, privacy-first defaults, and delightful polish."
+    />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta property="og:title" content="Fera Tech — Playful apps engineered for flow" />
+    <meta
+      property="og:description"
+      content="Discover QuarCade and future Fera Tech creations. Crafted with performance, privacy, and accessibility in mind."
+    />
+    <meta property="og:image" content="https://fera-tech.com/assets/images/hero.webp" />
+    <meta property="og:url" content="https://fera-tech.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fera Tech" />
+    <meta name="twitter:description" content="Playful apps engineered for flow." />
+    <meta name="twitter:image" content="https://fera-tech.com/assets/images/hero.webp" />
+    <link rel="canonical" href="https://fera-tech.com/" />
+    <script type="module" src="/ts/main.ts" defer></script>
+  </head>
+  <body class="min-h-screen antialiased bg-gradient-to-b from-black via-transparent to-black/80 text-white">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-black/60 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a class="flex items-center gap-2 text-lg font-semibold" href="/">
+          <img src="/assets/logos/quarcade.svg" alt="Fera Tech monogram" class="h-8 w-8" />
+          <span>Fera Tech</span>
+        </a>
+        <nav aria-label="Primary navigation" class="flex items-center gap-6 text-sm font-medium">
+          <a href="/apps/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Apps</a>
+          <a href="/privacy/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Privacy</a>
+          <a href="/support/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Support</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="/apps/"
+            class="btn btn-secondary hidden text-sm md:inline-flex"
+          >Explore apps</a>
+          <button
+            type="button"
+            data-theme-toggle
+            class="rounded-full border border-white/10 px-4 py-2 text-sm font-medium hover:border-fx-blue hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue"
+          >Dark mode</button>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <section class="hero bg-cover bg-center h-[80svh]" style="background-image:url('assets/images/hero.webp')">
-      <div class="flex items-center justify-center h-full bg-black/50">
-        <div class="text-center px-4">
-          <h1 class="text-5xl font-extrabold animate-gradient-text">Fera Tech</h1>
-          <p class="mt-4 text-lg">Tiny studio. Playful apps. Zero friction.</p>
-          <div class="mt-6">
-            <a href="apps/index.html" class="bg-gradient-to-r from-fx-pink to-fx-blue text-white py-2 px-4 rounded-lg hover:shadow-lg">Explore Apps</a>
-            <a href="support/index.html" class="ml-4 text-fx-blue underline">Contact</a>
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(89,181,255,0.25),_transparent_60%)]"></div>
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-24 text-center md:flex-row md:text-left">
+          <div class="flex-1 space-y-6">
+            <p class="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-1 text-xs uppercase tracking-[0.3em] text-white/70">
+              Indie studio • Global reach
+            </p>
+            <h1 class="text-4xl font-semibold leading-tight md:text-6xl">
+              Playful apps engineered for
+              <span class="bg-gradient-to-r from-fx-pink via-white to-fx-blue bg-clip-text text-transparent">flow</span>
+            </h1>
+            <p class="max-w-xl text-lg text-white/80">
+              We are Fera Tech, a small team obsessed with delightful interactions, instant load times, and privacy-first defaults. QuarCade is just the beginning.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a class="btn btn-primary" href="/apps/">Browse our apps</a>
+              <a class="btn btn-secondary" href="/support/">Talk with us</a>
+            </div>
+          </div>
+          <div class="flex w-full flex-1 justify-center" data-reveal>
+            <div class="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+              <div class="gradient-border">
+                <div class="flex flex-col gap-4 rounded-full bg-black/90 px-6 py-5 text-left">
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.4em] text-white/60">Featured</p>
+                    <p class="mt-1 text-lg font-semibold text-white">QuarCade</p>
+                  </div>
+                  <p class="text-sm text-white/70">
+                    Seven handcrafted arcade challenges. One slick neon cabinet.
+                  </p>
+                  <a class="btn btn-primary w-full justify-center" href="/apps/quarcade.html">Play the trailer</a>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute -bottom-16 -left-12 h-48 w-48 rounded-full bg-fx-pink/30 blur-3xl"></div>
+              <div class="pointer-events-none absolute -top-12 -right-8 h-40 w-40 rounded-full bg-fx-blue/30 blur-3xl"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="py-16">
-      <div class="container mx-auto text-center px-4">
-        <h2 class="text-3xl font-bold">Featured Apps</h2>
-        <div id="app-preview" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8"></div>
-        <a href="apps/index.html" class="mt-6 inline-block text-fx-blue underline">View all apps →</a>
-      </div>
-    </section>
+      <section class="mx-auto max-w-6xl px-6 py-24">
+        <div class="flex flex-col gap-8 md:flex-row md:items-end">
+          <div class="max-w-xl space-y-4">
+            <h2 class="text-3xl font-semibold md:text-4xl">Featured experiences</h2>
+            <p class="text-white/70">
+              Curated picks from the Fera Tech lab. Each title is crafted with accessibility, responsiveness, and meaningful challenge in mind.
+            </p>
+          </div>
+          <a class="btn btn-secondary self-start" href="/apps/">See all apps</a>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-featured-apps></div>
+      </section>
 
-    <section class="py-16 bg-gray-800">
-      <div class="container mx-auto text-center px-4">
-        <h2 class="text-3xl font-bold">Why Fera?</h2>
-        <div class="flex flex-col md:flex-row justify-center gap-4 mt-8">
-          <div class="bg-gray-700 p-4 rounded-lg">Performance-first</div>
-          <div class="bg-gray-700 p-4 rounded-lg">Privacy-aware by design</div>
-          <div class="bg-gray-700 p-4 rounded-lg">Tasteful motion. No gimmicks.</div>
+      <section class="border-y border-white/5 bg-white/5 py-24 dark:bg-white/5" aria-labelledby="why-fera">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="grid gap-12 md:grid-cols-[2fr_3fr] md:items-center">
+            <div class="space-y-6">
+              <h2 id="why-fera" class="text-3xl font-semibold md:text-4xl">Why teams choose Fera Tech</h2>
+              <p class="text-white/70">
+                Delight isn’t a buzzword. It’s a commitment to quality, privacy, and thoughtful motion. Every release ships with zero-crash tolerance and telemetry you can opt out of.
+              </p>
+              <ul class="space-y-4 text-white/80">
+                <li class="flex gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 rounded-full bg-fx-pink"></span>
+                  Pixel-perfect at 120Hz with GPU-friendly animations.
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 rounded-full bg-fx-blue"></span>
+                  Privacy-first: no creepy trackers, transparent policies.
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 rounded-full bg-white/70"></span>
+                  Built-in accessibility and responsive design across devices.
+                </li>
+              </ul>
+            </div>
+            <div class="grid gap-6 md:grid-cols-2">
+              <article class="rounded-3xl border border-white/10 bg-black/50 p-6 shadow-lg" data-reveal>
+                <h3 class="text-xl font-semibold">90+ Lighthouse mobile</h3>
+                <p class="mt-2 text-sm text-white/70">Performance, accessibility, best practices, and SEO are non-negotiable metrics for every launch.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-black/50 p-6 shadow-lg" data-reveal>
+                <h3 class="text-xl font-semibold">Async-first support</h3>
+                <p class="mt-2 text-sm text-white/70">We respond within 24h on weekdays with actionable fixes and follow-ups.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-black/50 p-6 shadow-lg" data-reveal>
+                <h3 class="text-xl font-semibold">Rapid iteration</h3>
+                <p class="mt-2 text-sm text-white/70">From prototype to ship in weeks, not quarters — without sacrificing polish.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-black/50 p-6 shadow-lg" data-reveal>
+                <h3 class="text-xl font-semibold">Global ready</h3>
+                <p class="mt-2 text-sm text-white/70">Localization hooks and offline support included from day one.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-24" aria-labelledby="newsletter">
+        <div class="grid gap-10 rounded-3xl border border-white/10 bg-white/5 p-10 shadow-lg md:grid-cols-[3fr_2fr]">
+          <div class="space-y-4">
+            <h2 id="newsletter" class="text-3xl font-semibold md:text-4xl">Stay in the loop</h2>
+            <p class="text-white/70">Get quarterly updates on new releases, beta invites, and behind-the-scenes making-of stories.</p>
+          </div>
+          <form
+            class="flex flex-col gap-3 md:flex-row"
+            data-newsletter-form
+            action="mailto:support@fera-tech.com?subject=Newsletter%20signup"
+            method="post"
+          >
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              required
+              placeholder="you@domain.com"
+              class="w-full rounded-full border border-white/10 bg-black/40 px-5 py-3 text-sm text-white placeholder:text-white/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue"
+            />
+            <button type="submit" class="btn btn-primary w-full justify-center md:w-auto">Join the list</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-black/70">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-sm text-white/60">© <span data-year></span> Fera Tech. Crafted in the Tashkent timezone.</p>
+          <p class="text-sm text-white/60">Privacy-first experiences that respect your attention.</p>
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a href="mailto:support@fera-tech.com" class="text-fx-blue hover:underline">Email</a>
+          <a href="https://twitter.com" class="text-fx-blue hover:underline" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://github.com" class="text-fx-blue hover:underline" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-    </section>
-
-    <section class="py-16">
-      <div class="container mx-auto text-center px-4">
-        <h2 class="text-3xl font-bold">Subscribe to our Newsletter</h2>
-        <form action="mailto:support@fera-tech.com?subject=Subscribe" method="get" class="mt-6 flex items-center justify-center gap-2">
-          <input type="email" placeholder="Your email" required class="p-2 rounded-lg text-gray-900" />
-          <button type="submit" class="bg-gradient-to-r from-fx-pink to-fx-blue text-white py-2 px-4 rounded-lg">Subscribe</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="py-6 text-center border-t border-white/10">
-    <p>© Fera Tech</p>
-    <div class="flex justify-center gap-4 mt-2">
-      <a href="#" class="text-fx-blue">Twitter</a>
-      <a href="#" class="text-fx-blue">GitHub</a>
-      <a href="#" class="text-fx-blue">LinkedIn</a>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
