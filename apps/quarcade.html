@@ -1,83 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuarCade - Fera Tech</title>
-    <meta name="description" content="QuarCade - Seven bite-size arcade games. Neon-fast, offline-friendly, zero clutter.">
-    <link rel="stylesheet" href="/css/tailwind.css">
-    <link rel="icon" href="/assets/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuarCade — Fera Tech</title>
+    <meta name="description" content="QuarCade is a neon-fast pocket arcade with seven handcrafted games, adaptive speed ramps, and zero intrusive ads." />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta property="og:title" content="QuarCade — Fera Tech" />
+    <meta property="og:description" content="Seven bite-size arcade games. One slick neon cabinet." />
+    <meta property="og:image" content="https://fera-tech.com/assets/images/hero.webp" />
+    <meta property="og:url" content="https://fera-tech.com/apps/quarcade.html" />
+    <link rel="canonical" href="https://fera-tech.com/apps/quarcade.html" />
     <script type="module" src="/ts/main.ts" defer></script>
-    <script type="module" src="/ts/apps.ts" defer></script>
-    <script type="module" src="/ts/observables.ts" defer></script>
-    <script>
-        // JSON-LD structured data for SoftwareApplication
-        const jsonLd = {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "QuarCade",
-            "operatingSystem": "iOS",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD",
-                "itemCondition": "https://schema.org/NewCondition",
-                "availability": "https://schema.org/InStock",
-                "url": "https://apps.apple.com/app/id6752634023"
-            }
-        };
-        document.addEventListener('DOMContentLoaded', () => {
-            const script = document.createElement('script');
-            script.type = 'application/ld+json';
-            script.text = JSON.stringify(jsonLd);
-            document.head.appendChild(script);
-        });
-    </script>
-</head>
-<body class="bg-gray-900 text-white">
-    <header class="sticky top-0 z-10 bg-opacity-80 backdrop-blur-lg p-4">
-        <nav role="navigation" class="flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold">Fera Tech</a>
-            <ul class="flex space-x-4">
-                <li><a href="/apps/" class="hover:text-fx-blue">Apps</a></li>
-                <li><a href="/privacy/" class="hover:text-fx-blue">Privacy</a></li>
-                <li><a href="/support/" class="hover:text-fx-blue">Support</a></li>
-            </ul>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-black via-transparent to-black/80 text-white">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a class="flex items-center gap-2 text-lg font-semibold" href="/">
+          <img src="/assets/logos/quarcade.svg" alt="Fera Tech monogram" class="h-8 w-8" />
+          <span>Fera Tech</span>
+        </a>
+        <nav aria-label="Primary navigation" class="flex items-center gap-6 text-sm font-medium">
+          <a href="/apps/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Apps</a>
+          <a href="/privacy/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Privacy</a>
+          <a href="/support/" data-nav class="hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue">Support</a>
         </nav>
+        <button
+          type="button"
+          data-theme-toggle
+          class="rounded-full border border-white/10 px-4 py-2 text-sm font-medium hover:border-fx-blue hover:text-fx-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fx-blue"
+        >Dark mode</button>
+      </div>
     </header>
-    <main class="p-6">
-        <section class="text-center">
-            <img src="/assets/logos/quarcade.svg" alt="QuarCade Logo" class="mx-auto mb-4" loading="lazy" decoding="async">
-            <h1 class="text-4xl font-bold mb-2">QuarCade</h1>
-            <p class="text-lg mb-6">Seven bite-size arcade games. Neon-fast, offline-friendly, zero clutter.</p>
-        </section>
-        <section>
-            <h2 class="text-2xl font-semibold mb-4">Features</h2>
-            <ul class="list-disc list-inside mb-6">
-                <li>Mini-arcade built for quick sessions.</li>
-                <li>Adaptive speed ramps.</li>
-                <li>Tight controls.</li>
-                <li>Global tier ladder.</li>
-            </ul>
-        </section>
-        <section class="mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Screenshots</h2>
-            <div class="flex space-x-4">
-                <img src="/assets/images/quarcade-1.webp" alt="Screenshot 1" class="rounded-lg shadow-lg" loading="lazy" decoding="async">
-                <img src="/assets/images/quarcade-2.webp" alt="Screenshot 2" class="rounded-lg shadow-lg" loading="lazy" decoding="async">
-                <img src="/assets/images/quarcade-3.webp" alt="Screenshot 3" class="rounded-lg shadow-lg" loading="lazy" decoding="async">
-            </div>
-        </section>
-        <section class="flex justify-center space-x-4">
-            <a href="https://apps.apple.com/app/id6752634023" class="bg-gradient-to-r from-fx-pink to-fx-blue text-white py-2 px-4 rounded-lg hover:shadow-lg">Download on App Store</a>
-            <a href="/privacy/" class="text-fx-blue">Privacy Policy</a>
-            <a href="/support/" class="text-fx-blue">Support</a>
-        </section>
+
+    <main class="mx-auto w-full max-w-5xl px-6 py-16">
+      <div data-app-detail="quarcade" class="space-y-16"></div>
+      <section class="mt-16 rounded-3xl border border-white/10 bg-white/5 p-10 shadow-lg" aria-labelledby="features">
+        <h2 id="features" class="text-2xl font-semibold md:text-3xl">What makes QuarCade special</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <article class="rounded-2xl border border-white/10 bg-black/50 p-6" data-reveal>
+            <h3 class="text-lg font-semibold">Precision touch controls</h3>
+            <p class="mt-2 text-sm text-white/70">Frames are tuned for 120Hz with haptic feedback options so every dodge, tap, and drift feels instant.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-black/50 p-6" data-reveal>
+            <h3 class="text-lg font-semibold">Adaptive challenge</h3>
+            <p class="mt-2 text-sm text-white/70">AI-powered difficulty curves keep the flow going, scaling back when you pause and ramping up on streaks.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-black/50 p-6" data-reveal>
+            <h3 class="text-lg font-semibold">Offline-first architecture</h3>
+            <p class="mt-2 text-sm text-white/70">Play every game without an internet connection. Cloud saves kick in when you reconnect.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-black/50 p-6" data-reveal>
+            <h3 class="text-lg font-semibold">Transparent privacy</h3>
+            <p class="mt-2 text-sm text-white/70">No surprise trackers. You can review analytics opt-ins anytime in Settings → Privacy.</p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer class="text-center p-4">
-        <p>© Fera Tech</p>
+
+    <footer class="border-t border-white/10 bg-black/70">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm text-white/60">© <span data-year></span> Fera Tech. Designed for players who love short sessions.</p>
+        <div class="flex gap-4 text-sm">
+          <a href="/apps/" class="text-fx-blue hover:underline">Back to apps</a>
+          <a href="/support/" class="text-fx-blue hover:underline">Support</a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
