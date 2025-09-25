@@ -1,0 +1,16 @@
+[
+  {
+    "id": "quarcade",
+    "name": "QuarCade",
+    "slug": "quarcade",
+    "category": "Games",
+    "tagline": "Seven bite-size arcade games. Neon-fast. Offline friendly.",
+    "description": "Mini-arcade built for quick sessions. Adaptive speed ramps, tight controls, global tier ladder.",
+    "tags": ["Arcade", "Offline", "Single-player"],
+    "icon": "/assets/logos/quarcade.svg",
+    "screenshots": ["/assets/images/quarcade-1.webp", "/assets/images/quarcade-2.webp", "/assets/images/quarcade-3.webp"],
+    "appStoreUrl": "https://apps.apple.com/app/id6752634023",
+    "privacyUrl": "/privacy/",
+    "supportUrl": "/support/"
+  }
+]
