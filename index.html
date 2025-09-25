@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fera Tech</title>
+<style>
+  :root { --bg:#0b0b13; --card:#141422; --fg:#e9e9f1; --muted:#a6a8b8; --accent:#5ae1ff; }
+  *{box-sizing:border-box} body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+  .wrap{max-width:940px;margin:auto;padding:32px}
+  header h1{margin:0 0 6px;font-size:28px}
+  header p{margin:0;color:var(--muted)}
+  .grid{display:grid;gap:16px;margin:24px 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--card);border-radius:14px;padding:18px;border:1px solid #1f2030}
+  .card h3{margin:0 0 8px} .card p{margin:0 0 10px;color:var(--muted)}
+  .btn{display:inline-block;background:var(--accent);color:#051018;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600}
+  footer{margin-top:24px;color:var(--muted)}
+  a{color:var(--accent)}
+</style>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Fera Tech</h1>
+      <p>Indie studio building tiny, fast, satisfying games for iPhone.</p>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h3>QuarCade</h3>
+        <p>Mini-arcade with seven bite-size games, daily challenge, and global tier ladder.</p>
+        <a class="btn" href="https://apps.apple.com/app/id6752634023">View on App Store</a>
+      </div>
+
+      <div class="card">
+        <h3>Support</h3>
+        <p>FAQ and contact for QuarCade.</p>
+        <a class="btn" href="/support/">Open Support</a>
+      </div>
+
+      <div class="card">
+        <h3>Privacy Policy</h3>
+        <p>How we handle data and ads (AdMob).</p>
+        <a class="btn" href="/privacy/">Read Privacy</a>
+      </div>
+
+      <div class="card">
+        <h3>Developer Files</h3>
+        <p><a href="/app-ads.txt">app-ads.txt</a> (for ad verification)</p>
+      </div>
+    </section>
+
+    <footer>© 2025 Fera Tech — <a href="/support/">support@fera-tech.com</a></footer>
+  </div>
+</body>
+</html>
