@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://fera-tech.com/sitemap.xml

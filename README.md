@@ -1,84 +1,73 @@
-# Fera Tech Website
+# Welcome to your Lovable project
 
-High-polish static marketing site for [fera-tech.com](https://fera-tech.com) built with Vite, Tailwind CSS, and TypeScript.
+## Project info
 
-## Prerequisites
+**URL**: https://lovable.dev/projects/d21a62e3-4e08-455c-a3d0-02b1abdcc71e
 
-- Node.js 20+
-- npm 9+
+## How can I edit this code?
 
-## Getting Started
+There are several ways of editing your application.
 
-```bash
-npm ci
+**Use Lovable**
+
+Simply visit the [Lovable Project](https://lovable.dev/projects/d21a62e3-4e08-455c-a3d0-02b1abdcc71e) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-Visit [http://localhost:5173](http://localhost:5173) to preview the site during development.
+**Edit a file directly in GitHub**
 
-## Build & Preview
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-```bash
-npm run build
-npm run preview
-```
+**Use GitHub Codespaces**
 
-The build step outputs a static bundle in `dist/` and automatically copies `CNAME`, `app-ads.txt`, `robots.txt`, and `sitemap.xml` so GitHub Pages serves required root files.
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## Project Structure
+## What technologies are used for this project?
 
-```
-.
-├── 404.html
-├── CNAME
-├── app-ads.txt
-├── apps/
-│   ├── index.html
-│   └── quarcade.html
-├── assets/
-│   ├── favicons/
-│   ├── images/
-│   └── logos/
-├── data/
-│   └── apps.json
-├── docs/
-│   └── site-plan.md
-├── privacy/
-│   └── index.html
-├── support/
-│   └── index.html
-├── styles.css
-├── ts/
-│   └── main.ts
-├── vite.config.ts
-├── tailwind.config.js
-├── postcss.config.js
-└── package.json
-```
+This project is built with:
 
-- `styles.css` holds Tailwind directives and custom component layers. Imported from `ts/main.ts` so Vite emits hashed CSS.
-- `data/apps.json` powers both the home page featured section and the apps directory/detail pages.
-- `ts/main.ts` wires theme toggling, data-driven rendering, and subtle animations while respecting `prefers-reduced-motion`.
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-## Deployment
+## How can I deploy this project?
 
-GitHub Pages builds are automated via `.github/workflows/pages.yml`:
+Simply open [Lovable](https://lovable.dev/projects/d21a62e3-4e08-455c-a3d0-02b1abdcc71e) and click on Share -> Publish.
 
-1. Install dependencies with `npm ci`.
-2. Run `npm run build`.
-3. Upload the `dist/` artifact and deploy to the `gh-pages` environment.
+## Can I connect a custom domain to my Lovable project?
 
-Ensure the workflow succeeds after merging to `main` so the production site updates.
+Yes, you can!
 
-## Accessibility & Performance
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-- Semantic HTML, visible focus states, and high-contrast color palette.
-- Dark/light theme toggle that respects `prefers-color-scheme` and persists in `localStorage`.
-- Lighthouse targets (mobile): Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95, SEO ≥ 95.
-
-## Support
-
-- Privacy policy: <https://fera-tech.com/privacy/>
-- Support hub: <https://fera-tech.com/support/>
-- Required AdMob declaration lives at `/app-ads.txt`.
-
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fera Tech Design System - Dark-first with Blue Glow Accents */
+
+@layer base {
+  :root {
+    /* Fera Tech Brand Colors */
+    --brand-50: 198 100% 95%;   /* #E6F8FF */
+    --brand-100: 198 100% 89%;  /* #C9F0FF */
+    --brand-300: 198 89% 49%;   /* #14AAE3 */
+    --brand-400: 198 92% 50%;   /* #10BBF2 */
+    --brand-500: 198 93% 51%;   /* #0FC4F6 */
+    --brand-700: 198 78% 45%;   /* #1893CD */
+
+    /* Dark-first surfaces */
+    --bg: 222 47% 7%;           /* #0B0F1A */
+    --card: 222 43% 11%;        /* #121829 */
+    --line: 222 32% 24%;        /* #2A3453 */
+
+    /* Text opacity tiers on dark */
+    --text-primary: 0 0% 100%;    /* white 0.9 opacity */
+    --text-secondary: 0 0% 70%;   /* white 0.7 opacity */
+    --text-tertiary: 0 0% 50%;    /* white 0.5 opacity */
+
+    /* Semantic tokens */
+    --background: var(--bg);
+    --foreground: var(--text-primary);
+    --card: var(--card);
+    --card-foreground: var(--text-primary);
+    --popover: var(--card);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--brand-500);
+    --primary-foreground: 222 47% 7%;
+    --secondary: var(--line);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--line);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--brand-700);
+    --accent-foreground: var(--text-primary);
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--text-primary);
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--brand-500);
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'Spline Sans Mono', 'Courier New', monospace;
+  }
+
+  /* Smooth transitions with reduced motion support */
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      transition-duration: 120ms;
+      transition-timing-function: ease-out;
+    }
+  }
+
+  /* Glass effect utilities */
+  .glass {
+    @apply backdrop-blur-sm bg-card/80 border border-border/50;
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-md bg-card/90 border border-brand-500/20;
+  }
+
+  /* Brand glow effect */
+  .brand-glow {
+    filter: drop-shadow(0 0 24px hsl(var(--brand-500) / 0.5));
+  }
+
+  .brand-glow-strong {
+    filter: drop-shadow(0 0 32px hsl(var(--brand-500) / 0.8));
+  }
+
+  /* Gradient backgrounds */
+  .gradient-orbit {
+    background: radial-gradient(ellipse at center, hsl(var(--brand-700) / 0.3) 0%, hsl(var(--brand-400) / 0.1) 50%, transparent 70%);
+  }
+
+  /* Focus styles */
+  .focus-brand {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

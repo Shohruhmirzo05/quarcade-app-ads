@@ -1,0 +1,37 @@
+[
+  {
+    "id": "quarcade",
+    "name": "QuarCade",
+    "slug": "quarcade",
+    "type": "Game",
+    "status": "Released",
+    "summary": "A pocket arcade with quick-hit mini games and slick haptics.",
+    "description": "QuarCade brings the arcade experience to your pocket with carefully crafted mini-games that feel amazing to play. Each game is designed for quick sessions with satisfying haptic feedback.",
+    "platforms": ["iOS"],
+    "features": [
+      "Daily challenge seed",
+      "Live Activities", 
+      "Game Center leaderboards",
+      "Haptic feedback",
+      "Quick-hit gameplay"
+    ],
+    "appStoreUrl": "https://apps.apple.com/uz/app/quarcade/id6752634023",
+    "icon": "🎮",
+    "category": "Entertainment"
+  }
+  ,
+  {
+    "id": "upcoming-app",
+    "name": "Upcoming app",
+    "slug": "upcoming-app",
+    "type": "Tool",
+    "status": "Planning",
+    "summary": "An upcoming product from our studio.",
+    "description": "",
+    "platforms": [],
+    "features": [],
+    "icon": "📝",
+    "category": "Productivity"
+  }
+]
+
