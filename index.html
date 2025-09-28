@@ -1,13 +1,197 @@
 <!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fera Tech — small studio, big polish.</title>
+  <meta name="description" content="Fera Tech — A tiny product studio" />
+  <meta name="author" content="Fera Tech" />
+  <meta property="og:title" content="Fera Tech" />
+  <meta property="og:description" content="We craft playful, privacy-aware apps with buttery-smooth performance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/images/og-fera.png" />
+  <link rel="icon" href="/assets/favicons/favicon.ico" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+    :root{--bg:#0B0F14;--muted:#9fb3d4;--fx-pink:#ff64d0;--fx-blue:#62d3ff;--glass-border:rgba(98,211,255,0.06);color-scheme:dark}
+    html[data-theme="light"]{color-scheme:light}
+    html,body{height:100%}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 10% 10%, rgba(98,211,255,0.03), transparent 8%), radial-gradient(1000px 500px at 90% 90%, rgba(154,123,255,0.03), transparent 10%),var(--bg);color:#e6eef8;padding:3rem 1.25rem}
+    .container{max-width:1100px;margin:0 auto}
+    .skip{position:absolute;left:-999px} .skip:focus{left:1rem;top:1rem}
+    header{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;padding:.5rem 0;backdrop-filter:blur(6px);z-index:10}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+    nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:.75rem;font-weight:700;background:linear-gradient(90deg,var(--fx-pink),var(--fx-blue));color:#061022}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+    .hero{display:flex;flex-direction:column;gap:.75rem;padding:2.25rem;border-radius:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));box-shadow:0 8px 40px rgba(2,6,23,0.6)}
+    .hero h1{font-size:clamp(2rem,4vw,3.2rem);margin:0;line-height:1.02}
+    .shimmer{background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.12), rgba(255,255,255,0.06));background-size:200% 100%;animation:sh 3s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    @media (prefers-reduced-motion: reduce){.shimmer{animation:none}}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+    .card{background:rgba(255,255,255,0.03);padding:1rem;border-radius:.85rem;border:1px solid rgba(255,255,255,0.02);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+    .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 48px rgba(2,6,23,0.6);border-color:var(--glass-border)}
+    .tag{font-size:.72rem;padding:.2rem .5rem;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+    footer{margin-top:3rem;color:var(--muted);text-align:center;font-size:.9rem}
+    :focus{outline:3px solid rgba(98,211,255,0.12);outline-offset:2px;border-radius:.375rem}
+    @media(min-width:900px){.hero{flex-direction:row;align-items:center;justify-content:space-between}.hero .content{max-width:60%}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="container">
+    <header role="banner" aria-label="Fera Tech header">
+      <div class="brand" aria-hidden="false">
+        <img src="/assets/logos/fera.svg" alt="Fera Tech logo" width="36" height="36">
+        <span>Fera Tech</span>
+      </div>
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="/apps/">Apps</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <button id="themeToggle" aria-pressed="true" title="Toggle color theme">🌙</button>
+      </nav>
+    </header>
+
+    <main id="main" role="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="content">
+          <h1 id="hero-title"><span class="shimmer">Fera Tech — small studio, big polish.</span></h1>
+          <p style="color:var(--muted);margin-top:.6rem">We craft playful, privacy-aware apps with buttery-smooth performance.</p>
+          <p style="margin-top:1rem">
+            <a class="btn" href="/apps/">Explore Apps</a>
+            <a class="btn ghost" href="/support/" style="margin-left:.6rem">Contact</a>
+          </p>
+        </div>
+        <div aria-hidden="true" style="min-width:220px;display:flex;justify-content:center;align-items:center">
+          <img src="/assets/images/hero.webp" alt="" width="240" height="140" style="border-radius:.75rem;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.45)">
+        </div>
+      </section>
+
+      <section aria-labelledby="apps-preview" style="margin-top:1.5rem">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem">
+          <h2 id="apps-preview" style="margin:0">Apps</h2>
+          <a href="/apps/" style="color:var(--muted);font-weight:600">View all apps →</a>
+        </div>
+
+        <div id="appsGrid" class="grid" aria-live="polite">
+          <!-- Fallback hardcoded QuarCade shown if JS disabled or fetch fails -->
+          <article class="card" id="fallback-quarcade" aria-labelledby="q-title">
+            <div style="display:flex;gap:.6rem;align-items:center">
+              <img src="/assets/logos/quarcade.svg" alt="QuarCade icon" width="56" height="56">
+              <div>
+                <h3 id="q-title" style="margin:0">QuarCade</h3>
+                <p style="margin:0;color:var(--muted);font-size:.95rem">Seven bite-size arcade games. Neon-fast. Offline friendly.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:.5rem;margin-top:.6rem;align-items:center;justify-content:space-between">
+              <div>
+                <span class="tag">Arcade</span>
+                <span class="tag">Offline</span>
+              </div>
+              <div style="display:flex;gap:.4rem">
+                <a class="btn ghost" href="https://apps.apple.com/app/id6752634023" target="_blank" rel="noopener">App Store</a>
+                <a class="btn" href="/apps/quarcade.html">Learn</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="why" style="margin-top:1.5rem">
+        <h2 id="why">Why Fera</h2>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+          <div class="card"><strong>Performance-first</strong><p style="color:var(--muted);margin:6px 0 0">Tiny bundles, fast TTI, privacy-minded.</p></div>
+          <div class="card"><strong>Privacy-aware by design</strong><p style="color:var(--muted);margin:6px 0 0">No trackers. Local-first where possible.</p></div>
+          <div class="card"><strong>Tasteful motion. No gimmicks.</strong><p style="color:var(--muted);margin:6px 0 0">Subtle animations that respect reduced-motion.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>© Fera Tech — small studio. Playful apps.</p>
+    </footer>
+  </div>
+
+  <noscript>
+    <div style="position:fixed;left:0;right:0;bottom:0;background:#111;padding:.6rem;text-align:center;color:#ffddee">JavaScript disabled — basic content shown.</div>
+  </noscript>
+
+  <script>
+    (function(){
+      // Theme: system default -> persisted localStorage
+      const root = document.documentElement;
+      const t = document.getElementById('themeToggle');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const stored = localStorage.getItem('theme');
+      const initial = stored === 'light' || stored === 'dark' ? stored : (prefersDark ? 'dark' : 'light');
+      root.setAttribute('data-theme', initial);
+      if(t) t.setAttribute('aria-pressed', initial === 'dark');
+
+      if(t){
+        t.addEventListener('click', () => {
+          const now = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', now);
+          localStorage.setItem('theme', now);
+          t.setAttribute('aria-pressed', now === 'dark');
+        });
+      }
+
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Try to load apps.json and render first 3 items; leave fallback on failure
+      async function renderApps(){
+        try{
+          const res = await fetch('/data/apps.json', {cache:'no-store'});
+          if(!res.ok) throw new Error('no apps.json');
+          const apps = await res.json();
+          const grid = document.getElementById('appsGrid');
+          if(!grid) return;
+          grid.innerHTML = '';
+          apps.slice(0,3).forEach(app => {
+            const art = document.createElement('article');
+            art.className = 'card';
+            art.innerHTML = `
+              <div style="display:flex;gap:.6rem;align-items:center">
+                <img src="${app.icon}" alt="${app.name} icon" width="56" height="56" loading="lazy" decoding="async">
+                <div>
+                  <h3 style="margin:0">${app.name}</h3>
+                  <p style="margin:0;color:var(--muted);font-size:.95rem">${app.tagline}</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:.5rem;margin-top:.6rem;align-items:center;justify-content:space-between">
+                <div>${(app.tags||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+                <div style="display:flex;gap:.4rem">
+                  <a class="btn ghost" href="${app.appStoreUrl}" target="_blank" rel="noopener">App Store</a>
+                  <a class="btn" href="/apps/${app.slug}.html">Learn</a>
+                </div>
+              </div>
+            `;
+            if(!reduceMotion){ art.style.transition = 'transform .18s ease, box-shadow .18s ease, border-color .18s ease'; }
+            grid.appendChild(art);
+          });
+        }catch(e){
+          console.warn('apps.json fetch failed', e);
+        }
+      }
+
+      renderApps();
+    })();
+  </script>
+</body>
+</html>
+
+
+{% comment %} <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fera-shipyard</title>
+  <title>Fera Tech</title>
   <meta name="description" content="Fera Tech — A tiny product studio" />
   <meta name="author" content="Fera Tech" />
 
-  <meta property="og:title" content="fera-shipyard" />
+  <meta property="og:title" content="Fera Tech" />
   <meta property="og:description" content="Fera Tech — A tiny product studio" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/src/assets/fera-tech-logo.png" />
@@ -29,4 +213,4 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-</html>
+</html> {% endcomment %}
