@@ -2,7 +2,7 @@ Effective date: 28 September 2025
 
 Fera Tech builds and publishes consumer apps and games. This policy explains how we handle personal information on our website fera-tech.com and across our apps, including QuarCade.
 
-If you have questions, contact us at support@fera-tech.com.
+If you have questions, contact us at shohruh@fera-tech.com.
 
 Quick summary
 
